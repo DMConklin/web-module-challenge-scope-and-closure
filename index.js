@@ -70,12 +70,6 @@ function inning(/*Code Here*/){
     return Math.floor(Math.random() * 3)
 }
 
-console.log(inning())
-console.log(inning())
-console.log(inning())
-console.log(inning())
-console.log(inning())
-
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
   1. Receive the callback function `inning` that was created in Task 2 in the first parameter
@@ -90,10 +84,19 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
+function finalScore(callback, innings/*Code Here*/){
   /*Code Here*/
+  let home = 0
+  let away = 0
+  for (let i = 0; i < innings; i++) {
+    home += callback()
+    away += callback()
+  }
+  return {
+    Home: home,
+    Away: away
+  }
 }
-
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
