@@ -59,7 +59,7 @@ function counter2() {
 /* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
 Use the inning function below to do the following:
   1. Return a random whole number of points between 0 and 2 scored by one team in an inning
-    
+
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
   
 NOTE: This will be a callback function for the tasks below
@@ -67,8 +67,14 @@ NOTE: This will be a callback function for the tasks below
 
 function inning(/*Code Here*/){
     /*Code Here*/
+    return Math.floor(Math.random() * 3)
 }
 
+console.log(inning())
+console.log(inning())
+console.log(inning())
+console.log(inning())
+console.log(inning())
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
