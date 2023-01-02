@@ -113,13 +113,8 @@ For example: invoking getInningScore(inning) might return this object:
 
 function getInningScore(callback/*Your Code Here */) {
   /*Your Code Here */
-  let innings = 4
-  let home = 0
-  let away = 0
-  for (let i = 0; i < innings; i++) {
-    home += callback()
-    away += callback()
-  }
+  let home = callback()
+  let away = callback()
   return {
     Home: home,
     Away: away
